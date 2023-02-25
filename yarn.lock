@@ -970,6 +970,11 @@
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   "version" "2.0.4"
 
+"@libphp/amazon-linux-2-v81@latest":
+  "integrity" "sha512-cR7w79FZr91x1ur0eR5DWX+Wb1hDuYdxzka6vIzUMMmsuW1NBaEpwDQu4icJizNVS26NwpUtDTJGIoEomBiYxA=="
+  "resolved" "https://registry.npmjs.org/@libphp/amazon-linux-2-v81/-/amazon-linux-2-v81-0.0.1.tgz"
+  "version" "0.0.1"
+
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -4439,6 +4444,13 @@
   "integrity" "sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg=="
   "resolved" "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   "version" "1.1.2"
+
+"vercel-php@^0.5.2":
+  "integrity" "sha512-N4Ty0nD6s855hdDZhATAdRtku9hKfZtzZjT8xWbZgp+WQedPsJ3QWl/fX7nk6y/bcOOgL+H2CaBSd1zPjKi9TQ=="
+  "resolved" "https://registry.npmjs.org/vercel-php/-/vercel-php-0.5.2.tgz"
+  "version" "0.5.2"
+  dependencies:
+    "@libphp/amazon-linux-2-v81" "latest"
 
 "watchpack@^2.4.0":
   "integrity" "sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg=="
