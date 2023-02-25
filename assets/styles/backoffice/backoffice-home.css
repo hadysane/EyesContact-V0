@@ -1,0 +1,49 @@
+@import "./components/backoffice-last-products-list-item.css";
+@import "./components/backoffice-last-suppliers-list-item.css";
+
+
+/*Layout*/
+#mainContent{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+#mainContent section{
+    padding-top:25px;
+    width:48%;
+}
+
+
+/*Last Products*/
+.last_products_list li{
+    padding-top:25px;
+    padding-bottom:25px;
+    border-bottom:solid 1px #075C7722;
+}
+.last_products_list li:first-child{
+    padding-top:0;
+}
+.last_products_list li:last-child{
+    padding-bottom:0;
+    border-bottom:none;
+}
+
+
+/*Last Suppliers*/
+.last_suppliers{
+    padding:25px;
+    background:#075C7722;
+    border-radius:35px;
+}
+.last_suppliers_list li{
+    padding-top:25px;
+    padding-bottom:25px;
+    border-bottom:solid 1px #f5f5f5;
+}
+.last_suppliers_list li:first-child{
+    padding-top:0;
+}
+.last_suppliers_list li:last-child{
+    padding-bottom:0;
+    border-bottom:none;
+}

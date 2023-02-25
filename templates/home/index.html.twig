@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact | Accueil{% endblock %}
+
+
+{% block body %}
+
+<div class="home-content">
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <li><img class="slide-header" src="{{ asset('images/slide-media/slide01.jpg')}}" alt="slide01"></li>
+        </div>
+        
+        <div class="mySlides fade">
+            <li><img class="slide-header" src="{{ asset('images/slide-media/slide02.jpg')}}" alt="slide02"></li>
+        </div>
+        
+        <div class="mySlides fade">
+            <li><img class="slide-header" src="{{ asset('images/slide-media/slide03.jpg')}}" alt="slide03"></li>
+        </div>
+        <div class="mySlides fade">
+            <li><img class="slide-header" src="{{ asset('images/slide-media/slide06.jpg')}}" alt="slide06"></li>
+        </div>
+        <div class="mySlides fade">
+            <li><img class="slide-header" src="{{ asset('images/slide-media/slide07.jpg')}}" alt="slide07"></li>
+        </div>
+        <div class="mySlides fade">
+            <li><img class="slide-header" src="{{ asset('images/slide-media/slide08.jpg')}}" alt="slide08"></li>
+        </div>
+        <div class="mySlides fade">
+            <li><img class="slide-header" src="{{ asset('images/slide-media/slide09.jpg')}}" alt="slide09"></li>
+        </div>
+        
+        {# flèches (précédent / suivant) #}
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+    </div>
+
+    <div class="tab-filter">
+        <a href=""><p class="text-tab">Filtrer</p></a>
+        <a href=""><p class="text-tab">Trier</p></a>
+    </div>
+
+
+    <div class="main-tab">
+
+        {% for product in products %}
+
+
+            <div class="card">
+                <a href={{path('app_product_single', {id:product.id})}}>
+                    <img class="card-tab" src="{{ asset('uploads/products/' ~ product.getImageProduct) }}" alt="lunette01">
+                    <h2 class="title-card">{{product.name}}</h2>
+                    <p class="price">{{product.price}}€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </a>
+            </div>
+
+        {% endfor %}
+
+     
+
+    </div>
+
+</div>
+
+
+
+{% block footer %}
+
+    {% include "/footer/footer.html.twig" %}
+
+{% endblock footer %}
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+{% endblock %}

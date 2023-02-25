@@ -1,0 +1,13 @@
+@layer components {
+    .btn-primary {
+        @apply lg:px-20 md:px-20 xs:px-6 py-2 bg-teal-700 hover:bg-teal-600 text-white rounded-full font-inria-serif text-lg;
+    }
+
+    .btn-secondary{
+        @apply lg:px-20  md:px-20 xs:px-6 py-2 bg-blue-ciel  hover:bg-teal-300 text-white rounded-full font-inria-serif  text-lg;
+    }
+    
+    .link_underline{
+        @apply underline underline-offset-2 ; 
+    }
+}

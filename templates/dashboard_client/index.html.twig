@@ -1,0 +1,293 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EYES CONTACT | Client Dashboard{% endblock %}
+
+{% block body %}
+
+{% for message in app.flashes('success') %}
+    <div class="bg-green-200 border-spacing-1 text-green-900 mb-8">
+        {{ message }}
+    </div>
+{% endfor %}
+
+
+<div class="main-dash">
+    <h1 class="title-tab">Mon compte Client</h1>
+
+    <section id="section-tab">
+        <ul id="tab-control">
+          <li class="tab-control" id="control-selected">Voir les produits</li>
+          <li class="tab-control">Liste des produits</li>
+          <li class="tab-control">Historique</li>
+          <li class="tab-control">Paramètres</li>
+        </ul>
+      
+        <div id="tab-div">
+          <div class="tab">
+            <h2>Les produits séléctionnés</h2>
+            <div class="main-tab">
+
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">75,00€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+        
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">84,99€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">75,00€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+        
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">84,99€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">75,00€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+        
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">84,99€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">75,00€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+        
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">84,99€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+            </div>
+          </div>
+      
+          <div class="tab">
+            <h2>Liste des produits</h2>
+            <div class="main-tab">
+
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">75,00€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">84,99€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+
+            </div>
+            
+          </div>
+      
+          <div class="tab">
+            <h2>Historique</h2>
+            <p class="text-date">Date : 01/12/22</p>
+            <div class="main-tab">
+
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">75,00€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">84,99€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+
+            </div>
+            <p class="text-date">Date : 18/03/22</p>
+            <div class="main-tab">
+
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">75,00€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+
+                <div class="card">
+                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                    <h2 class="title-card">Lunette de vue <br/> Femme</h2>
+                    <p class="price">84,99€</p>
+                    <button class="btn-card" type="submit">Ajouter</button>
+                </div>
+
+            </div>
+            
+          </div>
+
+          <div class="tab">
+            
+            <div class="tab01">
+                <h2>Mon Compte</h2>
+                <img class="card-tab" src="{{ asset('images/profil-client.jpg')}}" alt="lunette01">
+                <p class="text-header">Informations personnelles</p>
+                <a class="text-deco-profil" href=""><p class="text-img">Changer l'image </p></a>
+            </div>
+            {# coordonnées du client #}
+            {# <div class="tab02">
+                <div class="form-content">
+
+                    <div class="">
+                        {% for message in app.flashes('success') %}
+                            <div class="">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                
+                        {{ form_start(form,{'attr': {'class':'tab-content'}}) }}
+                
+                         {{ form_errors(form) }}
+                
+                        <div class="tab-list ">
+                            <div class="w-full">
+                                {{ form_label(form.email, 'Email', { 'label_attr': {'class':'control-label'}}) }}
+                                {{ form_widget(form.email, { 'attr': {'class':'input-tab'}}) }}
+                            </div>
+                            <div class="w-full">
+                                {{ form_label(form.adress, 'Adresse de domicile', { 'label_attr': {'class':'control-label'}}) }}
+                                {{ form_widget(form.adress, { 'attr': {'class':'input-tab'}}) }}
+                            </div>
+                        </div>
+                
+                        <div class="tab-list ">
+                            
+                            <div class="w-full">
+                                {{ form_label(form.mobile, 'Mobile', { 'label_attr': {'class':'control-label'}}) }}
+                                {{ form_widget(form.mobile, { 'attr': {'class':'input-tab'}}) }}
+                            </div>
+                            <div class="w-full">
+                                {{ form_label(form.password, 'Mot de passe', { 'label_attr': {'class':'control-label'}}) }}
+                                {{ form_widget(form.password, { 'attr': {'class':'input-tab'}}) }}
+                            </div>
+                        </div>
+
+                        
+
+            
+                    
+            
+                    {{ form_end(form) }}
+                </div>
+            </div> #}
+            <h2>Informations sur mes produits</h2>
+            <div class="tab-03">
+                
+                <div class="info-product">
+                    <p class="details">Lunette pour Homme</p>
+                    <p class="details">Marque : Dior</p>
+                    <p class="details">Couleur : Noir</p>
+                    <p class="details">Sur le site Eyes Contacts</p>
+                    <span class="price-info">75,00€</span>
+                </div>
+                <div class="info-product">
+                    <p class="details">Lunette pour Homme</p>
+                    <p class="details">Marque : Police</p>
+                    <p class="details">Couleur : Grid</p>
+                    <p class="details">Sur le site Eyes Contacts</p>
+                    <span class="price-info">84,00€</span>
+                </div>
+                <div class="info-product">
+                    <p class="details">Lunette pour Homme</p>
+                    <p class="details">Marque : Armany</p>
+                    <p class="details">Couleur : Dorée</p>
+                    <p class="details">Sur le site Eyes Contacts</p>
+                    <span class="price-info">58,00€</span>
+                </div>
+            </div>
+            
+
+        
+            </div>
+            
+            <h2>Votre Facture</h2>
+            <div class="desc-fact">
+                <p class="date-facture">Facture du 02/03/22</p>
+                {# upload file #}
+                <a class="link-fact" href="">Télécharger votre facture PDF</a>
+            </div>
+
+            {# button delete #}
+
+            <button class="btn-delete">Suppression du compte</button>
+
+            <div class="btn-form">
+
+                <button class="btn-cancel">Annuler</button>
+                <button class="btn-primary">{{ button_label|default('Enregistrer') }}</button>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    
+</div>
+
+
+
+
+
+{% block footer %}
+    {% include "/footer/footer.html.twig" %}
+{% endblock footer %}
+<script>
+    const controls = document.querySelectorAll(".tab-control");
+const tabs = document.querySelectorAll(".tab");
+
+// display none for 1-length tabs
+for (let i = 1; i < tabs.length; i++) {
+  tabs[i].style.display = "none";
+}
+
+// set value forl all tabs
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].setAttribute("value", i);
+}
+
+// add event listener for all controls
+for (let i = 0; i < controls.length; i++) {
+  controls[i].setAttribute("value", i);
+  controls[i].addEventListener("click", displayTab);
+}
+
+// display tab function
+function displayTab() {
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].style.display = "none";
+    controls[i].removeAttribute("id");
+  }
+  tabs[this.value].style.display = "block";
+  controls[this.value].setAttribute("id", "control-selected");
+}
+</script>
+
+{% endblock %}

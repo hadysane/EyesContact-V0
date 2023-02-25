@@ -1,0 +1,41 @@
+.last_suppliers_list_item{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+
+/*Infos Block*/
+.last_suppliers_list_item_infos{
+    flex:1;
+}
+.last_suppliers_list_item_detailsContainer{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+.last_suppliers_list_item_infos_name{
+    margin-bottom:10px;
+    font-size:1.1rem;
+    font-weight:600;
+}
+.last_suppliers_list_item_detailsContainer p{
+    margin-bottom:10px;
+    font-size:.9rem;
+    color:#555;
+}
+.last_suppliers_list_item_details{
+    flex:1;
+}
+
+
+/*Actions Block*/
+.last_suppliers_list_item_actions{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+.last_suppliers_list_item_actions a:first-child{
+    margin-bottom:10px;
+}

@@ -1,0 +1,127 @@
+@import "./components/backoffice-topbar.css";
+@import "./components/backoffice-sidebar.css";
+
+/*Fonts Import*/
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Inter:wght@100;200;300;400;500;600;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/*Layout*/
+body {
+    background-color: white;
+    font-family:'Inter';
+}
+main{
+    margin:100px 50px 0 370px;
+}
+#backoffice-pageHero{
+    margin-bottom:50px;
+}
+
+/*Fonts Styles*/
+h1,h2,h3,h4,h5,h6{
+    font-family:'Inria Serif';
+}
+h1{
+    font-size:2.4rem !important;
+    font-weight:700 !important;
+}
+h2{
+    font-size:1.6rem !important;
+}
+h3{
+    font-size:1.4rem !important;
+}
+a:hover{
+    text-decoration:underline;
+}
+
+/*Elements Styles*/
+.separator_m{
+    margin-top:5px;
+    margin-bottom:25px;
+    height:3px;
+    width:75px;
+    background:#075C77;
+}
+.separator_xl{
+    margin-top:25px;
+    height:8px;
+    width:100px;
+    background:#075C77;
+}
+
+.backoffice_dualTitle span{
+    font-weight:600;
+    color:#075C77;
+}
+
+.backoffice_button_fill{
+    padding:10px 0;
+    width:125px;
+    text-align:center;
+    background:#075C77;
+    border-radius:5px;
+    font-size:.9rem;
+    color:#fff;
+    transition:all 250ms ease;
+}
+.backoffice_button_outline{
+    padding:10px 0;
+    width:125px;
+    text-align:center;
+    background:transparent;
+    border:solid 2px #075C77;
+    border-radius:5px;
+    font-size:.9rem;
+    font-weight:500;
+    color:#075C77;
+    transition:all 250ms ease;
+}
+.backoffice_button_fill:hover{
+    transform:scale(.95);
+    text-decoration:none;
+    transition:all 150ms ease;
+}
+.backoffice_button_outline:hover{
+    transform:scale(.95);
+    text-decoration:none;
+    transition:all 150ms ease;
+}
+
+/*Pages List Buttons*/
+.backoffice_button_listFill{
+    padding:8px 12px;
+    background:#075C77;
+    color:#fff;
+    border-radius:5px;
+}
+.backoffice_button_listOutline{
+    padding:7px 11px;
+    background:transparent;
+    border:solid 2px #075C77;
+    font-weight:500;
+    color:#075C77;
+    border-radius:5px;
+}
+.backoffice_button_listRed{
+    padding:8px 12px;
+    background:#e66c6c;
+    color:#fff;
+    border-radius:5px;
+}
+.backoffice_button_listFill:hover{
+    transform:scale(.95);
+    text-decoration:none;
+    transition:all 150ms ease;
+}
+.backoffice_button_listOutline:hover{
+    transform:scale(.95);
+    text-decoration:none;
+    transition:all 150ms ease;
+}
+.backoffice_button_listRed:hover{
+    background:#db4545;
+    transform:scale(.95);
+    text-decoration:none;
+    transition:all 150ms ease;
+}

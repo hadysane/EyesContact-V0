@@ -1,0 +1,98 @@
+<div class="navbar-menu">
+    <a class="link-content" href={{path('app_home')}}><img class="logo" src="{{ asset('images/EYES_CONTACT.jpg')}}" alt="logo_eyes_contact"></a>
+
+    {% for categorie in categories%}
+    <div class="">
+        <a class="title-nav" href={{path('app_product', {id: categorie.id})}}>{{ categorie.name }}</a>
+    </div>
+    {% endfor %}
+
+    <div class="">
+       <a class="link-content" href={{path('app_contact')}}><span class="title-nav">Contact</span> </a>
+    </div>
+
+    {# {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+   
+    {% endif %} #}
+
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+ 
+        {% if app.user.avatar == null %}
+            <div class="dropdown">
+                <img class="noAvatar" src="https://www.photoprof.fr/images_dp/photographes/profil_vide.jpg" style="width:60px; border-radius: 100%; "/>
+                <p>{{ app.user.firstname  }} {{ app.user.lastname }}</p>
+                <div class="dropdown-content">
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a class="link-user" href={{path('admin')}}>Mon compte Admin</a><br/><br/>
+                    {% endif %}
+                    <a class="link-user" href={{path('app_dashboard_client')}}>Mon compte client</a>
+                </div>
+            </div>
+        {% else %}
+
+         {# upload avatar #}
+
+            <div class="dropdown">
+                <img class="avatar" src={{ asset('uploads/avatars/' ~ app.user.avatar) }} alt="profil" style="width:60px; border-radius: 100%; ">
+                <p> {{ app.user.firstname  }} {{ app.user.lastname }} </p>
+                <div class="dropdown-content">
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a class="link-user" href={{path('admin')}}>Mon compte Admin</a><br/><br/>
+                    {% endif %}
+                    <a class="link-user" href={{path('app_dashboard_client')}}>Mon compte client</a>
+                </div>
+            </div>
+
+        {% endif %}
+       
+        {# Button logout #}
+
+        <a class="link-login" href={{path('app_logout')}}>Déconnexion</a>
+
+    {% else %}
+
+     <div class="link-log">
+        <a class="link-register" href={{path('app_register')}}>Inscription</a> /
+        <a class="link-login" href={{path('app_login')}}>Connexion</a>
+    </div>
+    
+    {% endif %}
+
+
+    
+
+    <div class="nav-icons">
+        <div class="img-basket">
+            <a href={{path('app_basket')}}><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>{# icon du panier  #}
+        </div>
+
+        <div class="bar-mobile">
+            <a class=" bar show"><i class="fa-solid fa-bars"></i> </a>
+            <a class="cross "><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    </div>
+
+</div>
+
+{# mobile navbar #}
+
+<div class="dropdown-mobile">
+     <div class="dropdown-mobile-link">
+        <a class="mobile-title-nav" href={{path('app_product', {id:'1'})}} >Lunettes de vue</a>
+    </div>
+    <div class="dropdown-mobile-link">
+        <a class="mobile-title-nav" href={{path('app_product', {id:'2'})}}>Lunettes de soleil</a>
+    </div>
+    <div class="dropdown-mobile-link">
+        <a class="mobile-title-nav" href={{path('app_product', {id:'3'})}}>Lentille</a>
+    </div>
+
+    <div class="mobile-title-nav">
+       <a class="" href={{path('app_contact')}}><span>Contact</span> </a>
+    </div>
+    
+    <div class="mobile-link-log">
+        <a class="link-register"  href={{path('app_register')}}>Inscription</a> /
+        <a class="link-login" href={{path('app_login')}}>Connexion</a>
+    </div>
+</div>

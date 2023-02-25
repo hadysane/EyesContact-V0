@@ -1,0 +1,216 @@
+#section-tab,
+#tab-control,
+#tab-div {
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+#section-tab {
+  display: flex;
+}
+
+#tab-control {
+  background: #80808066;
+  color: #000000;
+  font-family: 'Inria Serif';
+  font-size: 17px;
+  width: 20%;
+  height: 170px;
+  text-align: center;
+  margin:5px;
+}
+
+#tab-div {
+  width: 70vw;
+}
+
+#control-selected {
+    background-color: #075C77;
+    color: white;
+    font-family: 'Inria Serif';
+    font-size: 17px;
+    width: 98%;
+    height: 40px;
+    text-align: center;
+}
+
+.main-tab{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap:10px;
+    padding: 10px;
+    text-align: center;
+}
+.btn-card{
+    background: #075C77;
+    color:white;
+    font-size: 15px;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Inria Serif';
+}
+
+.title-card{
+    font-size: 16px;
+    color:#1f1e1e9e;
+    margin: 10px;
+}
+
+.title-card .price{
+    font-family: 'inter';
+    margin: 10px;
+}
+
+.card-tab{
+    width: 100px;
+    margin: auto;
+}
+.card{
+    margin: 15px;
+}
+
+.tab-filter{
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Inria Serif';
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+}
+
+.text-tab{
+    margin:10px;
+}
+
+.title-tab{
+    font-family: 'Inria Serif';
+    font-size: 20px;
+    margin: 40px;
+    color: #000000;
+}
+
+h2{
+    font-family: 'Inria Serif';
+    font-size: 22px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.tab01{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:10px;
+    padding: 10px;
+}
+
+.input-tab{
+    margin-top: 0.75rem;
+    width: 100%;
+    --tw-bg-opacity: 1;
+    background-color: #d9d9d98f;
+    border: solid 1px transparent;
+}
+.tab-content{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.tab-list{
+    margin: 10px auto;
+}
+
+.desc-fact{
+    margin: 16px;
+    font-size: 16px;
+    font-family: 'Inria Serif';
+    color: #808080db;
+}
+
+.btn-delete{
+    color: #ff0505;
+    font-size: 22px;
+    margin: 15px;
+    font-family: 'Inria Serif';
+}
+
+.text-img{
+    color:#1479D5;
+    text-align: center;
+}
+.text-header{
+    font-size: 17px;
+    font-family: 'Inria Serif';
+    color: #000000;
+    margin: 10px;
+}
+.text-deco-profil{
+    text-decoration: revert;
+    cursor:pointer;
+}
+
+input #dashboard_client_category input #dashboard_client_type{
+    margin: 15px;
+    width: 95%;
+    background: #8080801c;
+    border-color: transparent;
+}
+
+.required{
+    font-size: 18px;
+    font-family: 'Inria Serif';
+    color:#000000;
+}
+
+.control-label{
+    font-family: 'Inria Serif';
+    font-size: 18px;
+    color: #000000;
+}
+
+.text-date{
+    color: #80808080;
+    font-size: 18px;
+    margin: 10px;
+    font-family: 'Inria Serif';
+}
+
+.link-fact{
+    font-size: 17px;
+    color: #075C77;
+    font-family: 'Inria Serif';
+}
+
+.btn-form{
+    text-align: center;
+    margin: 10px auto;
+}
+
+.btn-cancel{
+    background: #8080805e;
+    width: 27%;
+    height: 43px;
+    border-radius: 25px;
+    margin: 10px;
+    color: #504e4ee0;
+}
+.tab-03{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.details{
+    color: #808080b5;
+    font-family: 'Inria Serif';
+    font-size: 16px;
+}
+.price-info{
+    color: #000000cf;
+    font-size: 15px;
+    font-family: 'Inter';
+}

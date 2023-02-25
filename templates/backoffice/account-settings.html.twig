@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact - Backoffice{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('backoffice-account-settings') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('backoffice-account-settings') }}
+{% endblock %}
+
+{% block body %}
+    {{include('backoffice/components/_topbar.html.twig')}}
+    {{include('backoffice/components/_sidebar.html.twig')}}
+
+    <main>
+        <div id="backoffice-pageHero">
+            <h1>Gestion du compte</h1>
+            <h2>Modifier les informations de votre compte admin</h2>
+            <div class="separator_xl"></div>
+        </div>
+
+        <div id="mainContent">
+            <section class="informations_settings">
+                <h3 class="backoffice_dualTitle">Mes <span>informations personnelles</span></h3>
+                <div class="separator_m"></div>
+                <div class="informations_settings_form">
+                    <div class="settings_change_image">
+                        <img alt="image de profil" src="{{ asset('images/profilExemple.jpg') }}"/>
+                        <a href="">Changer l'image</a>
+                    </div>
+                    <div class="settings_update_form">
+                        <form action="" method="post">
+                            <label>Nom
+                                <input id="name" type="text" name="name">
+                            </label>
+                            <label>Prénom
+                                <input id="surname" type="text" name="surname">
+                            </label>
+                            <label>Adresse email
+                                <input id="email" type="text" name="email">
+                            </label>
+                            <label>N° Téléphone
+                                <input id="phone" type="text" name="phone">
+                            </label>
+                            <div>
+                                <input type="submit" value="Enregistrer"/>
+                            </div>
+                        </form>
+                        <a class="backoffice_button_outline" href="#">Réinitialiser mon mot de passe</a>
+                    </div>
+                </div>
+
+            </section>
+            <section class="address_settings">
+                <h3 class="backoffice_dualTitle">Mon <span>adresse postale</span></h3>
+                <div class="separator_m"></div>
+                <div class="address_settings_form">
+                    <form action="" method="post">
+                        <label>Numéro de rue
+                            <input id="streetNumber" type="text" name="streetNumber">
+                        </label>
+                        <label>Nom de la rue
+                            <input id="street" type="text" name="street">
+                        </label>
+                        <label>Code postal
+                            <input id="zipCode" type="text" name="zipCode">
+                        </label>
+                        <label>Ville
+                            <input id="city" type="text" name="city">
+                        </label>
+                        <label>Pays
+                            <input id="country" type="text" name="country">
+                        </label>
+                        <br>
+                        <div>
+                            <input type="submit" value="Enregistrer"/>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <script>
+        //Classe active sur la bonne rubrique
+        let myMenu = document.querySelectorAll("#backoffice_sidebar_mainMenu ul li");
+        myMenu[0].classList.remove("active")
+        myMenu[5].classList.add("active")
+    </script>
+
+{% endblock %}

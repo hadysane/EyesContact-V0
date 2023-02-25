@@ -1,0 +1,43 @@
+.title{
+    color: #21156D;
+    font-size: 35px;
+    font-family: 'Inria Serif';
+    text-align: center;
+    font-weight: 100;
+}
+.title-head{
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+}
+.title2{
+    color: #000000;
+    font-size: 35px;
+    font-family: 'Inria Serif';
+    text-align: center;
+    font-weight: 100;
+}
+.text-form{
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Inria Serif';
+    margin-top: 30px;
+}
+
+
+
+form{
+    justify-content: space-between;
+    align-content: center;
+    margin: auto;
+    padding:19px;
+}
+.text-form{
+    font-family:'Inria Serif';
+    font-size:18x;
+    margin:10px;
+    color:#0000008c;
+}
+.form-content{
+    margin:17px;
+}

@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact - Backoffice{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('backoffice-pagesList') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('backoffice-pagesList') }}
+{% endblock %}
+
+{% block body %}
+    {{include('backoffice/components/_topbar.html.twig')}}
+    {{include('backoffice/components/_sidebar.html.twig')}}
+
+    <main>
+        <div id="backoffice-pageHero">
+            <h1>Liste des commandes</h1>
+            <h2>Voir, créer, modifier le statut ou supprimer des commandes</h2>
+            <div class="separator_xl"></div>
+        </div>
+
+        <div id="mainContent">
+            <a class="backoffice_button_fill" href="{{ path('backoffice_order_add') }}">Créer une commande</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Statut</th>
+                        <th>Montant</th>
+                        <th>Numéro de facture</th>
+                        <th>Date de création</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>En cours</td>
+                        <td>245,00€</td>
+                        <td>EC00001280722</td>
+                        <td>28/07/2022</td>
+                        <td>
+                            <a class="backoffice_button_listFill" href="#">Voir</a>
+                            <a class="backoffice_button_listOutline" href="#">Modifier</a>
+                            <a class="backoffice_button_listRed" href="#">Supprimer</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        //Classe active sur la bonne rubrique
+        let myMenu = document.querySelectorAll("#backoffice_sidebar_mainMenu ul li");
+        myMenu[0].classList.remove("active")
+        myMenu[6].classList.add("active")
+    </script>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+.greenConfirm{
+    background: #84F55C;
+}
+.greenTitle{
+    color:#0D700B;
+    font-size: 20px;
+    font-family: 'Inria Serif';
+    text-align: center;
+}
+
+.confirm-order-main{
+    width: 60%;
+    margin: 137px auto;
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Eyes Contact | Mentions Légales{% endblock %}
+
+{% block body %}
+<style>
+    .title-mention{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(54, 53, 53);
+    font-family: "arial, sans-serif";
+    margin:15px;
+    }
+    .desc-mention{
+        margin: 10px auto;
+    }
+    .text-legal{
+        font-size: 16px;
+        margin: 10px;
+        font-family: "arial, sans-serif";
+    }
+</style>
+
+<div class="container mx-auto mt-4">
+
+    <h1 class="font-inria-serif text-4xl text-center md:text-left">Mentions Légales</h1>
+    
+    <div class="desc-mention">
+        <p class="title-mention" class="title-legal">Identité :<span class="text-legal">Site E-Commerce Optique</span></p class="title-mention">
+        
+        <p class="title-mention" class="title-legal">Coordonnées : <span class="text-legal">eyes-contacts@gmail.com</span></p class="title-mention">
+        
+        <p class="title-mention" class="title-legal">Propriété Intellectuelle : <span class="text-legal">En cours</span></p class="title-mention">
+        
+        <p class="title-mention" class="title-legal">Hébergeur : <span class="text-legal"> Github / Heroku</span></p class="title-mention">
+
+        <p class="title-mention" class="title-legal">Numéro TVA : <span class="text-legal">01 02 03 01 02 03</span></p class="title-mention">
+        
+        <p class="title-mention" class="title-legal">Numero RCS : <span class="text-legal">01 02 03 01 02 03</span></p class="title-mention">
+
+        <p class="title-mention" class="title-legal">Noms du groupe : <span class="text-legal">Hady, Jimmy et Alice</span></p class="title-mention">
+
+        <p class="title-mention" class="title-legal">Adresse : <span class="text-legal">08 Rue des Lilas, 75200 Paris</span></p class="title-mention">
+        
+
+    </div>
+    
+    
+
+
+</div>
+
+{% include 'footer/footer.html.twig' %}
+{% endblock %}
+

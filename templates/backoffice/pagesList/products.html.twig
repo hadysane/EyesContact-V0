@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact - Backoffice{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('backoffice-pagesList') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('backoffice-pagesList') }}
+{% endblock %}
+
+{% block body %}
+    {{include('backoffice/components/_topbar.html.twig')}}
+    {{include('backoffice/components/_sidebar.html.twig')}}
+
+    <main>
+        <div id="backoffice-pageHero">
+            <h1>Liste des produits</h1>
+            <h2>Voir, ajouter, modifier ou supprimer des produits</h2>
+            <div class="separator_xl"></div>
+        </div>
+
+        <div id="mainContent">
+            <a class="backoffice_button_fill" href="{{ path('backoffice_product_add') }}">Ajouter un produit</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Catégorie</th>
+                        <th>Prix</th>
+                        <th>Quantité</th>
+                        <th>Poids</th>
+                        <th>Dernière MAJ</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunette Dior</td>
+                        <td>Lunette de vue</td>
+                        <td>85,00€</td>
+                        <td>100</td>
+                        <td>0,05g</td>
+                        <td>28/07/2022</td>
+                        <td>
+                            <a class="backoffice_button_listFill" href="#">Voir</a>
+                            <a class="backoffice_button_listOutline" href="#">Modifier</a>
+                            <a class="backoffice_button_listRed" href="#">Supprimer</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lunette Dior</td>
+                        <td>Lunette de vue</td>
+                        <td>85,00€</td>
+                        <td>100</td>
+                        <td>0,05g</td>
+                        <td>28/07/2022</td>
+                        <td>
+                            <a class="backoffice_button_listFill" href="#">Voir</a>
+                            <a class="backoffice_button_listOutline" href="#">Modifier</a>
+                            <a class="backoffice_button_listRed" href="#">Supprimer</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        //Classe active sur la bonne rubrique
+        let myMenu = document.querySelectorAll("#backoffice_sidebar_mainMenu ul li");
+        myMenu[0].classList.remove("active")
+        myMenu[1].classList.add("active")
+    </script>
+
+{% endblock %}

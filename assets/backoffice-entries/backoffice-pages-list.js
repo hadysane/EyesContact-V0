@@ -1,0 +1,1 @@
+import '../styles/backoffice/pagesList/backoffice-pagesList.css';

@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact - Backoffice{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('backoffice-pagesList') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('backoffice-pagesList') }}
+{% endblock %}
+
+{% block body %}
+    {{include('backoffice/components/_topbar.html.twig')}}
+    {{include('backoffice/components/_sidebar.html.twig')}}
+
+    <main>
+        <div id="backoffice-pageHero">
+            <h1>Liste des fournisseurs</h1>
+            <h2>Voir, ajouter, modifier ou supprimer des fournisseurs</h2>
+            <div class="separator_xl"></div>
+        </div>
+
+        <div id="mainContent">
+            <a class="backoffice_button_fill" href="{{ path('backoffice_supplier_add') }}">Ajouter un fournisseur</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Téléphone</th>
+                        <th>Email</th>
+                        <th>Ville</th>
+                        <th>Pays</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dior</td>
+                        <td>0102030405</td>
+                        <td>dior@email.test</td>
+                        <td>Paris</td>
+                        <td>France</td>
+                        <td>
+                            <a class="backoffice_button_listFill" href="#">Voir</a>
+                            <a class="backoffice_button_listOutline" href="#">Modifier</a>
+                            <a class="backoffice_button_listRed" href="#">Supprimer</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        //Classe active sur la bonne rubrique
+        let myMenu = document.querySelectorAll("#backoffice_sidebar_mainMenu ul li");
+        myMenu[0].classList.remove("active")
+        myMenu[4].classList.add("active")
+    </script>
+
+{% endblock %}

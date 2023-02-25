@@ -1,0 +1,28 @@
+@layer components {
+    .footer{
+        @apply bg-blue-footer text-white mt-20;
+        padding-top: 30px;
+        padding-bottom: 36px;
+    }
+
+    .footer h4 {
+        @apply font-inria-serif text-2xl;
+
+    }
+
+    .footer ul {
+        @apply mt-5; 
+    }
+
+    .footer ul li {
+        @apply font-inria-serif mt-3; 
+    }
+
+    .footer ul li a {
+        @apply text-white; 
+    }
+
+    .footer ul li a i {
+        @apply ml-6; 
+    }
+}

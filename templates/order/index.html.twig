@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact | Commande{% endblock %}
+
+{% block body %}
+<style>
+    .tabOrder{
+    width: 60%;
+    margin: auto;
+}
+.numberOrder{
+    border: 2px solid;
+    height: 73px;
+    width: 65%;
+    margin: 15px;
+}
+.titleNumber{
+    margin: 15px;
+}
+.orderNumb{
+    font-weight: 600;
+}
+.form-content{
+    display: flex;
+    margin: 18px;
+}
+.textConfirm{
+    margin: 10px;
+}
+
+.checkbox{
+    margin: 14px;
+}
+</style>
+
+    <div class="command-main">
+
+        <h1 class="title-bask">Confirmation de paiement</h1>
+
+        <div class="form-content">
+
+            <div class="tabOrder">
+                {% for message in app.flashes('success') %}
+                    <div class="bg-green-200 border-spacing-1 text-green-900 mb-8">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+        
+                {{ form_start(form,{'attr': {'class':'w-full'}}) }}
+        
+                 {{ form_errors(form) }}
+        
+                <div class="flex flex-row  gap-56 mb-5 justify-between ">
+                    <div class="w-full">
+                        {{ form_label(form.home_street, 'Rue de Domicile', { 'label_attr': {'class':'control-label'}}) }}
+                        {{ form_widget(form.home_street, { 'attr': {'class':'control-input'}}) }}
+                    </div>
+                    <div class="w-full">
+                        {{ form_label(form.city, 'Ville', { 'label_attr': {'class':'control-label'}}) }}
+                        {{ form_widget(form.city, { 'attr': {'class':'control-input'}}) }}
+                    </div>
+
+                </div>
+                
+                <div class="flex flex-row  gap-56 mb-5 justify-between ">
+                    <div class="w-full">
+                        {{ form_label(form.postal_code, 'Code Postal', { 'label_attr': {'class':'control-label'}}) }}
+                        {{ form_widget(form.postal_code, { 'attr': {'class':'control-input'}}) }}
+                    </div>
+                    <div class="w-full">
+                        {{ form_label(form.pays, 'Pays', { 'label_attr': {'class':'control-label'}}) }}
+                        {{ form_widget(form.pays, { 'attr': {'class':'control-input'}}) }}
+                    </div>
+
+                </div>
+
+                <div class="">
+                    <div class="w-full">
+                        {{ form_label(form.number_card, 'Numéro de la carte', { 'label_attr': {'class':'control-label'}}) }}
+                        {{ form_widget(form.number_card, { 'attr': {'class':'control-input'}}) }}
+                    </div>
+
+                </div>
+        
+                <div class="flex  flex-row gap-56 mt-5 mb-16 justify-between ">
+                    
+                    <div class="w-full">
+                        {{ form_label(form.secure_numb, 'Numéro de sécurité', { 'label_attr': {'class':'control-label'}}) }}
+                        {{ form_widget(form.secure_numb, { 'attr': {'class':'control-input'}}) }}
+                    </div>
+                    <div class="w-full">
+                        {{ form_label(form.date_expire, 'Date expiré', { 'label_attr': {'class':'control-label'}}) }}
+                        {{ form_widget(form.date_expire, { 'attr': {'class':'control-input'}}) }}
+                    </div>
+                  
+    
+                </div>
+
+                <div class="numberOrder">
+                    <p class="titleNumber">Numéro de votre commande : <span class="orderNumb">522365144TRGXD</span></p>
+                </div>
+
+
+                <div class="form-content">
+                    <input class="checkbox" type="checkbox">
+                    <label class="textConfirm" for="textConfirm"> Veuillez confirmez les conditions d'utilisation</label><br>
+                </div>
+    
+            <div class=" container flex-row mt-20 gap-8 form-content">
+
+                <a class="btn-secondary" href="/">Annuler</a>
+                <button class="btn-primary">{{ button_label|default('Envoyer') }}</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+
+
+
+    </div>
+
+       
+    </div>
+
+
+
+
+
+    {% block footer %}
+
+        {% include "/footer/footer.html.twig" %}
+
+    {% endblock footer %}
+
+{% endblock %}

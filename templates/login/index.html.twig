@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Login | eyes Contact {% endblock %}
+
+{% block body %}
+
+{{ render(controller(
+    'App\\Controller\\NavbarController::index'
+)) }}
+
+    <div class="container mx-auto pb-48 ">
+
+        <h1 class="font-inria-serif text-4xl text-center mb-16 text-blue-login"> Se Connecter </h1>
+
+        <form action="{{ path('app_login') }}" method="post" class="flex flex-col justify-center">
+
+            <div class="flex flex-row  gap-36 md:gap-36 sm:gap-5 xs:gap-5">
+                <div class="w-full">
+                    <label class="control-label" for="username">Email:</label>
+                    <input class="control-input" type="text" id="username" name="_username" />
+                </div>
+
+                <div class="w-full">
+                    <label class="control-label" for="password">Password:</label>
+                    <input class="control-input" type="password" id="password" name="_password"/>
+                </div>
+
+            </div>
+            {# If you want to control the URL the user is redirected to on success
+            <input type="hidden" name="_target_path" value="/account"/> #}
+            <div class="flex flex-col mt-20 gap-8 justify-center text-center ">
+                <button class="btn-primary" type="submit">Se connecter</button>
+                <div class="px-4">
+                    <a class="btn-secondary" href={{path('app_register')}}>S'inscrire</a>
+                </div>
+                <a class="link_underline" href={{path('app_reset_password')}} > Mot de passe oublier </a>
+            </div>
+
+            
+        </form>
+
+    </div>
+
+{% include 'footer/footer.html.twig' %}
+{% endblock %}

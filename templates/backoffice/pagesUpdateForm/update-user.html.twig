@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact - Backoffice{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('backoffice-pages-addUpdate-form') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('backoffice-pages-addUpdate-form') }}
+{% endblock %}
+
+{% block body %}
+    {{include('backoffice/components/_topbar.html.twig')}}
+    {{include('backoffice/components/_sidebar.html.twig')}}
+
+    <main>
+        <div id="backoffice-pageHero">
+            <h1>Modifier un utilisateur</h1>
+            <h2>Modifier les informations d'un utilisateur</h2>
+            <div class="separator_xl"></div>
+        </div>
+
+        <div id="mainContent">
+            
+        </div>
+    </main>
+
+    <script>
+        //Classe active sur la bonne rubrique
+        let myMenu = document.querySelectorAll("#backoffice_sidebar_mainMenu ul li");
+        myMenu[0].classList.remove("active")
+        myMenu[1].classList.add("active")
+    </script>
+
+{% endblock %}

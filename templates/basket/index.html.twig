@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EYES CONTACT | Panier {% endblock %}
+
+{% block body %}
+<style>
+   .mode{
+    width: 60%;
+    margin: 15px;
+   }
+   .icon-paie{
+    width: 90px;
+    margin: 10px;
+   } 
+   .fa-trash{
+    color: red;
+    margin: 10px;
+   }
+</style>
+    <div class="main-basket">
+        <h1 class="title-bask">Mon Panier</h1>
+
+        <div class="tab-lab">
+            <p class="title-list">Type</p>
+            <p class="title-list">Catégory</p>
+            <p class="title-list">Prix</p>
+            <p class="title-list">Quantité</p>
+            <p class="title-list"></p>
+        </div>
+
+
+        <div class="command">
+            <a href=""><img class="img-product" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01"></a>
+            <p class="details">Lunette de Vue Femme</p>
+            <span class="price">75,00€</span>
+            <input type="select" placeholder="1">
+
+            <div class="btn-modif">
+                <a class="edit" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a class="delete" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="command">
+            <a href=""><img class="img-product" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01"></a>
+            <p class="details">Lunette de Vue Femme</p>
+            <span class="price">75,00€</span>
+            <input type="select" placeholder="1">
+
+            <div class="btn-modif">
+                <a class="edit" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a class="delete" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="infoTotal">
+            <p class="total">Prix Total:</p>
+            <p class="priceTotal">159,99€</p>
+        </div>
+
+        <div class="tab-promo">
+            <p class="text-promo">Avez-vous un code promo ?</p>
+            <input class="input-promo" type="text">
+        </div>
+
+        <div class="mode">
+            <h3 class="title-paie">Paiement acceptés</h3>
+            <div class="log-paie">
+                <img class="icon-paie" src="{{ asset('images/paiement-icons/icon01.jpg')}}" alt="icon01">
+                <img class="icon-paie" src="{{ asset('images/paiement-icons/icon02.jpg')}}" alt="icon02">
+                <img class="icon-paie" src="{{ asset('images/paiement-icons/icon03.jpg')}}" alt="icon03">
+                <img class="icon-paie" src="{{ asset('images/paiement-icons/icon04.jpg')}}" alt="icon04">
+            </div>
+        </div>
+        
+
+        <div class="btn-form">
+            <button class="btn-cancel">Annuler</button>
+            <a class="btn-primary" href={{path('app_order')}}>{{ button_label|default('Confirmer le paiement') }}</a>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    {% block footer %}
+        {% include "/footer/footer.html.twig" %}
+    {% endblock footer %}
+{% endblock %}

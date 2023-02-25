@@ -1,0 +1,101 @@
+#mainContent section{
+    width:66%;
+}
+#mainContent .address_settings{
+    margin-top:50px;
+    padding:25px;
+    background:#075C7722;
+    border-radius:35px;
+}
+.informations_settings_form{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+
+.settings_change_image{
+    margin-right:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    font-size:.8rem;
+    color:#555;
+}
+.settings_change_image img{
+    margin-bottom:15px;
+    width:75%;
+    border-radius:50%;
+}
+
+
+.settings_update_form a{
+    padding:8px 12px;
+}
+.settings_update_form label{
+    padding-right:15px;
+    margin-bottom:25px;
+    font-size:.9rem;
+    color:#555;
+    display:inline-block;
+    width:48%;
+}
+.settings_update_form label input{
+    width:100%;
+    line-height:2rem;
+    color:#000;
+    background:#86BFF355;
+    border-radius:5px;
+}
+.settings_update_form div{
+    margin-top:15px;
+    margin-bottom:25px;
+    text-align:left;
+}
+.settings_update_form div input[type="submit"]{
+    padding:8px 12px;
+    background-color:#075C77;
+    color:#fff;
+    border-radius:5px;
+    transition:all 150ms ease;
+}
+.settings_update_form div input[type="submit"]:hover{
+    cursor:pointer;
+    transform:scale(.95);
+    transition:all 250ms ease;
+}
+
+
+
+.address_settings_form label{
+    padding-right:15px;
+    margin-bottom:25px;
+    font-size:.9rem;
+    color:#555;
+    display:inline-block;
+    width:30%;
+}
+.address_settings_form label input{
+    width:100%;
+    line-height:2rem;
+    color:#000;
+    background:#fff;
+    border-radius:5px;
+}
+.address_settings_form div{
+    margin-top:15px;
+    text-align:right;
+}
+.address_settings_form div input[type="submit"]{
+    padding:8px 12px;
+    background-color:#075C77;
+    color:#fff;
+    border-radius:5px;
+    transition:all 150ms ease;
+}
+.address_settings_form div input[type="submit"]:hover{
+    cursor:pointer;
+    transform:scale(.95);
+    transition:all 250ms ease;
+}

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact - Backoffice{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('backoffice-pagesList') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('backoffice-pagesList') }}
+{% endblock %}
+
+{% block body %}
+    {{include('backoffice/components/_topbar.html.twig')}}
+    {{include('backoffice/components/_sidebar.html.twig')}}
+
+    <main>
+        <div id="backoffice-pageHero">
+            <h1>Liste des catégories</h1>
+            <h2>Voir, ajouter, modifier ou supprimer des catégories</h2>
+            <div class="separator_xl"></div>
+        </div>
+
+        <div id="mainContent">
+            <a class="backoffice_button_fill" href="{{ path('backoffice_category_add') }}">Ajouter une catégorie</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Parent</th>
+                        <th>Slug</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunettes de vue</td>
+                        <td>Lunettes</td>
+                        <td>lunettes-de-vue</td>
+                        <td>
+                            <a class="backoffice_button_listFill" href="#">Voir</a>
+                            <a class="backoffice_button_listOutline" href="#">Modifier</a>
+                            <a class="backoffice_button_listRed" href="#">Supprimer</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        //Classe active sur la bonne rubrique
+        let myMenu = document.querySelectorAll("#backoffice_sidebar_mainMenu ul li");
+        myMenu[0].classList.remove("active")
+        myMenu[3].classList.add("active")
+    </script>
+
+{% endblock %}

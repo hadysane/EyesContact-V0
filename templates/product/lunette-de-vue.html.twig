@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Eyes Contact{% endblock %}
+
+{% block body %}
+
+{% if category.getImage %}
+<div class="hero w-full h-72 flex " style="background :  url(' {{asset('uploads/categories/' ~ category.getImage) }}'); 
+background-repeat: no-repeat; background-position: center center; background-size: cover">
+    <div class="container mx-auto my-auto">
+        <h1>{{ category.name }}</h1>
+    </div>
+</div>
+{% else %}
+
+<div class="hero w-full h-72 flex " style="background :  url(' {{asset('/images/product/hero-femme.png') }}'); 
+background-repeat: no-repeat; background-position: center center; background-size: cover">
+    <div class="container mx-auto my-auto">
+        <h1>{{ category.name }}</h1>
+    </div>
+</div>
+
+{% endif %}
+
+<div class="container md:mx-auto xs:mx-2 mt-14">
+
+    <div class="flex justify-start gap-4">
+        <div class="flex">
+            <div class="mb-3 xl:w-96">
+                <select class="form-select appearance-none block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-gray-700
+                bg-white bg-clip-padding bg-no-repeat
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-footer focus:outline-none" aria-label="Default select example">
+                    <option selected> Trier par </option>
+                    <option value="1">Prix croissant</option>
+                    <option value="2">Prix décroissant</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex ">
+            <div class="mb-3 xl:w-96">
+                <select class="form-select appearance-none block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-gray-700
+                bg-white bg-clip-padding bg-no-repeat
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-footer focus:outline-none" aria-label="Default select example">
+                    <option selected>Couleur</option>
+                    <option value="1">Rouge</option>
+                    <option value="2">Bleu</option>
+                    <option value="3">Noir</option>
+                    <option value="3">Or</option>
+                </select>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="main-tab">
+        {% for product in products %}
+            <div class="card">
+                <a  href={{path('app_product_single', {id:product.id})}}>
+                     <img class="card-tab" src="{{ asset('uploads/products/' ~ product.getImageProduct) }}" alt={{ product.name }}>
+                    <h2 class="title-card">{{ product.name }}</h2>
+                    <p class="price">{{ product.price |format_currency('EUR', locale='fr') }}</p>
+                </a>
+                <button class="btn-card" type="submit">Ajouter</button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'footer/footer.html.twig'%}
+{% endblock %}

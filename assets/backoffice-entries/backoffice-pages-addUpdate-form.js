@@ -1,0 +1,1 @@
+import '../styles/backoffice/pagesAddUpdateForm/backoffice-pages-addUpdate-form.css';

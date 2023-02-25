@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eyes Contact - Backoffice{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('backoffice-home') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('backoffice-home') }}
+{% endblock %}
+
+{% block body %}
+    {{include('backoffice/components/_topbar.html.twig')}}
+    {{include('backoffice/components/_sidebar.html.twig')}}
+
+    <main>
+        <div id="backoffice-pageHero">
+            <h1>Bonjour Jimmy !</h1>
+            <h2>Bienvenue sur le tableau de bords Eyes Contact</h2>
+            <div class="separator_xl"></div>
+        </div>
+
+        <div id="mainContent">
+            <section class="last_products">
+                <h3 class="backoffice_dualTitle">Derniers <span>produits ajoutés</span></h2>
+                <div class="separator_m"></div>
+                <ul class="last_products_list">
+                    <li>{{include('backoffice/components/_last-products-list-item.html.twig')}}</li>
+                    <li>{{include('backoffice/components/_last-products-list-item.html.twig')}}</li>
+                    <li>{{include('backoffice/components/_last-products-list-item.html.twig')}}</li>
+                </ul>
+            </section>
+            
+            <section class="last_suppliers">
+                <h3 class="backoffice_dualTitle">Derniers <span>fournisseurs ajoutés</span></h2>
+                <div class="separator_m"></div>
+                <ul class="last_suppliers_list">
+                    <li>{{include('backoffice/components/_last-suppliers-list-item.html.twig')}}</li>
+                    <li>{{include('backoffice/components/_last-suppliers-list-item.html.twig')}}</li>
+                    <li>{{include('backoffice/components/_last-suppliers-list-item.html.twig')}}</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+{% endblock %}

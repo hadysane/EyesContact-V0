@@ -1,0 +1,41 @@
+/* Tailwind Styles */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/*Styles Backoffice*/
+@import "backoffice/backoffice-base.css";
+
+
+/* Font Family  */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Inter:wght@100;200;300;400;500;600;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*Pages */
+
+@import './navbar.css';
+@import './register.css';
+@import './home.css';
+
+@import './dashboardClient.css';
+@import './basket.css';
+@import './order.css';
+@import './confirmOrder.css';
+
+@import './product.css';
+@import './mentions.css';
+ 
+/* -------------- */
+
+/* Composants */
+@import './composants/footer.css'; 
+@import './composants/buttons.css'; 
+@import './composants/forms.css';
+
+
+
+/* body css */
+body {
+    background-color: white;
+}
+

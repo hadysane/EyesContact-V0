@@ -1,0 +1,42 @@
+#backoffice_topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    width:100%;
+    max-height:60px;
+    padding:10px 50px 10px 370px;
+    background:#075C77;
+    font-size:.8rem;
+    color:#fff;
+}
+#backoffice_topbar p span{
+    font-weight:800;
+}
+
+#backoffice_topbar, #topbar_leftPart, #topbar_rightPart{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#topbar_leftPart p:first-child, #topbar_rightPart p:first-child{
+    padding-right:25px;
+    border-right:solid 1px #fff;
+}
+#topbar_leftPart div:last-child, #topbar_rightPart p:last-child{
+    padding-left:25px;
+}
+
+#topbar_leftPart_accountSettings{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+#topbar_leftPart_accountSettings img{
+    margin-right:10px;
+    max-width:28px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius:50%;
+}

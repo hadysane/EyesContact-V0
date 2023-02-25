@@ -1,0 +1,1 @@
+import '../styles/backoffice/backoffice-account-settings.css';

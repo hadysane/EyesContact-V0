@@ -1,0 +1,9 @@
+@layer components {
+    .control-input{
+        @apply  bg-blue-light mt-3 w-full; 
+        border: solid 1px transparent; 
+    }
+    .control-label{
+        @apply font-inter mb-5; 
+    }
+}

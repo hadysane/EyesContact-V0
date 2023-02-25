@@ -1,0 +1,28 @@
+#mainContent .backoffice_button_fill{
+    padding:10px 25px;
+}
+
+#mainContent table{
+    margin-top:35px;
+    width:100%;
+}
+#mainContent table tbody tr td, #mainContent table thead tr th{
+    text-align:left;
+    border-left:solid 1px #075C7722;
+}
+#mainContent table thead tr th{
+    padding:15px;
+    padding-bottom:25px;
+    text-align:left;
+    border-left:solid 1px #075C7722;
+}
+#mainContent table tbody tr td{
+    padding:15px;
+    text-align:left;
+    font-size:.9rem;
+    color:#555;
+    border-left:solid 1px #075C7722;
+}
+#mainContent table tbody tr:last-child td{
+    padding-bottom:35px;
+}

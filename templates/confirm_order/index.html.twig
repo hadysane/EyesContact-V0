@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EYES CONTACT | Commande confirmée {% endblock %}
+
+{% block body %}
+<style>
+    .greenConfirm{
+    background: #84f55c82;
+    height: 190px;
+}
+.greenTitle{
+    color:#0D700B;
+    font-size: 28px;
+    font-family: 'Inria Serif';
+    text-align: center;
+}
+
+.confirm-order-main{
+    width: 60%;
+    margin: 137px auto;
+}
+.number-order{
+    border: 2px solid;
+    width: 410px;
+    height: 70px;
+    margin: 10px auto;
+    color:#0D700B;
+}
+.number-command{
+    margin: 20px;
+    color:#0D700B;
+}
+.info-facture{
+    margin: 20px;
+    font-size: 19px;
+    font-family: 'Inria Serif';
+}
+.link-home{
+color:#075C77;
+margin: 10px;
+}
+</style>
+    <div class="confirm-order-main">
+
+        <div class="greenConfirm">
+            <h1 class="greenTitle">Votre commande a bien été pris en compte.<p></p><i class="fa fa-check" aria-hidden="true"></i></h1>
+
+            <div class="number-order">
+                <p class="number-command">Numéro de votre commande : 522365144TRGXD</p>
+            </div>
+    
+            
+        </div>
+        
+        <div class="info-facture">
+            <p class="text-fact">Vous pouvez retrouver votre commande ainsi que votre facture dans votre adresse email.</p>
+        </div>
+        <a class="link-home" href={{path('app_home')}}>Continuez à découvrir d'autres produits</a>
+    </div>
+
+
+    {% block footer %}
+        {% include "/footer/footer.html.twig" %}
+    {% endblock footer %}
+{% endblock %}

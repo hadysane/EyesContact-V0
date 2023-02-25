@@ -1,0 +1,50 @@
+#backoffice_sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10;
+    width:320px;
+    height:100%;
+    background:#80C0D4;
+    border-right:solid 5px #075C77;
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+}
+
+#backoffice_sidebar_logo{
+    margin:0 auto;
+    padding:75px 0;
+    max-width:175px;
+}
+#backoffice_sidebar_logo img{
+    border-radius:3px;
+}
+
+#backoffice_sidebar_mainMenu ul li{
+    padding:15px 0;
+    text-align:center;
+    font-weight:600;
+}
+#backoffice_sidebar_mainMenu ul li:hover, #backoffice_sidebar_mainMenu ul li.active{
+    background:#075C77;
+}
+#backoffice_sidebar_mainMenu a:hover{
+    text-decoration:none;
+}
+
+.mainMenu_item{
+    margin:0 auto;
+    width:50%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.mainMenu_svgIcon{
+    max-width:28px;
+    margin-right:25px;
+}
+.mainMenu_svgIcon_adjusted svg{
+    transform:scale(1.2);
+}

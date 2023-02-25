@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class=" container mt-20">
+        {% for message in app.flashes('success') %}
+            <div class="bg-green-200 border-spacing-1 text-green-900 mb-8">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        {{ form_start(registrationForm,{'attr': {'class':'w-full'}}) }}
+
+         {{ form_errors(registrationForm) }}
+
+        <div class="flex flex-row  gap-56 mb-5 justify-between ">
+            {# upload file avatar profil #}
+            <div class="w-full">
+                {{ form_row(registrationForm.avatar) }}
+
+            </div>
+
+            <div class="w-full">
+                {{ form_label(registrationForm.firstname, 'Prénom', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(registrationForm.firstname, { 'attr': {'class':'control-input'}}) }}
+            </div>
+            <div class="w-full">
+                {{ form_label(registrationForm.lastname, 'Nom de Famille', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(registrationForm.lastname, { 'attr': {'class':'control-input'}}) }}
+            </div>
+            <div class="w-full">
+                {{ form_label(registrationForm.email, 'Email', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(registrationForm.email, { 'attr': {'class':'control-input'}}) }}
+            </div>
+        </div>
+
+        <div class="flex  flex-row gap-56 mt-5 mb-16 justify-between ">
+            
+            <div class="w-full">
+                {{ form_label(registrationForm.phoneNumber, 'Mobile', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(registrationForm.phoneNumber, { 'attr': {'class':'control-input'}}) }}
+            </div>
+            <div class="w-full">
+                {{ form_label(registrationForm.plainPassword, 'Mot de passe', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(registrationForm.plainPassword, { 'attr': {'class':'control-input'}}) }}
+            </div>
+            {# <div class="w-full">
+                {{ form_label(registrationForm.passwordConfirm, 'Confirmation du mot de passe', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(registrationForm.passwordConfirm, { 'attr': {'class':'control-input'}}) }}
+            </div> #}
+          
+
+        </div>
+
+    <p class="text-form">Informations pour la livraison</p>
+
+    {# <div class=" container mt-20">
+        {% for message in app.flashes('success') %}
+            <div class="bg-green-200 border-spacing-1 text-green-900 mb-8">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        {{ form_start(form,{'attr': {'class':'w-full'}}) }}
+
+         {{ form_errors(form) }}
+
+        <div class="flex flex-row  gap-56 mb-5 justify-between ">
+            <div class="w-full">
+                {{ form_label(form.domicile, 'Domicile', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(form.domicile, { 'attr': {'class':'control-input'}}) }}
+            </div>
+            <div class="w-full">
+                {{ form_label(form.city, 'Ville', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(form.city, { 'attr': {'class':'control-input'}}) }}
+            </div>
+        </div>
+
+        <div class="flex  flex-row gap-56 mt-5 mb-16 justify-between ">
+            <div class="w-full">
+                {{ form_label(form.number_domicile, 'Numéro de domicile', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(form.number_domicile, { 'attr': {'class':'control-input'}}) }}
+            </div>
+            <div class="w-full">
+                {{ form_label(form.postal_code, 'Code Postal', { 'label_attr': {'class':'control-label'}}) }}
+                {{ form_widget(form.postal_code, { 'attr': {'class':'control-input'}}) }}
+            </div>
+          
+
+        </div>
+
+        <div class="form-content">
+            <p>Veuillez confirmez afin de recevoir des bons plans promo par email et SMS</p>
+            <p>En cliquant sur inscription, j'accepte les conditions d'utilisation générales d'adhésion de Eyes Contact.</p>
+        </div> #}
+
+    <div class=" container flex-row mt-20 gap-8 form-content">
+
+        <a class="btn-secondary" href="/">Annuler</a>
+        <button class="btn-primary">{{ button_label|default('Envoyer') }}</button>
+    </div>
+    {{ form_end(registrationForm) }}
+</div>
+
+
+{% block footer %}
+
+    {% include "/footer/footer.html.twig" %}
+
+{% endblock footer %}
+{% endblock %}
