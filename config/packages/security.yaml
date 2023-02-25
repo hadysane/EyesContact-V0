@@ -34,7 +34,7 @@ security:
         - { path: ^/admin, roles: ROLE_ADMIN}
         # - { path: ^/dashboard, roles: admin }
         # - { path: ^/dashboard, roles: ROLE_ADMIN }
-        - { path: ^/dashboard, roles: ['ROLE_CLIENT',ROLE_ADMIN]}
+        - { path: ^/dashboard, roles: ['ROLE_CLIENT','ROLE_ADMIN']}
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
