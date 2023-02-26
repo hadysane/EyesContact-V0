@@ -15,13 +15,13 @@ variables:
 # Actions à exécuter à la construction et au déploiement
 hooks:
     build: |
-        set -e
-        bin/console assets:install --no-debug
-        bin/console cache:clear
+      set -e
+      composer install --prefer-dist --no-interaction --no-progress --no-suggest
+      bin/console doctrine:schema:update --force
+      bin/console cache:clear
     deploy: |
-        set -e
-        bin/console assets:install --symlink --relative public
-        bin/console cache:clear
+      set -e
+      bin/console cache:clear
 
 # L'espace disque configurés
 disk: 2048
