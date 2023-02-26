@@ -28,7 +28,7 @@ hooks:
 
 
 # L'espace disque configurés
-disk: 160000
+disk: 1000
 
 # Les dossiers qui doivent rester accessibles en écriture
 mounts:
