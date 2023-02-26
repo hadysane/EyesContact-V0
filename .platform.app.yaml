@@ -23,10 +23,6 @@ hooks:
         bin/console assets:install --symlink --relative public
         bin/console cache:clear
 
-# Les services utilisés
-relationships:
-    database: "mysqldb:mysql"
-
 # L'espace disque configurés
 disk: 2048
 
