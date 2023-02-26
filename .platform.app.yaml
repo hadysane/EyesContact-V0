@@ -1,29 +1,19 @@
-# Le nom de l'application
-name: app
-
-# Le type d'application à construire
-type: 'php:8.0'
-build:
-    flavor: composer
-
+name: my-symfony-app
+type: "php:8.0"
+relationships:
+  database: "mysql:mysql"
 variables:
-    env:
-        # Configuration des variables d'environnement pour Symfony
-        APP_ENV: 'prod'
-        APP_DEBUG: 0
-
-# Actions à exécuter à la construction et au déploiement
+  APP_ENV: 'prod'
+  APP_DEBUG: '0'
 hooks:
-    build: |
-        set -e
-        bin/console assets:install --no-debug
-        bin/console cache:clear
-    deploy: |
-        set -e
-        bin/console assets:install --symlink --relative public
-        bin/console cache:clear
-
-# Les services utilisés
+  build: |
+    set -e
+    composer install --prefer-dist --no-interaction --no-progress --no-suggest
+    bin/console doctrine:schema:update --force
+    bin/console cache:clear
+  deploy: |
+    set -e
+    bin/console cache:clear
 
 
 # L'espace disque configurés
