@@ -1,0 +1,6 @@
+parameters:
+    database_host: eyescontact-db.cqqnjgitvpvl.us-east-2.rds.amazonaws.com
+    database_port: 3306
+    database_name: eyescontact-db
+    database_user: admin
+    database_password: EyesContact2023

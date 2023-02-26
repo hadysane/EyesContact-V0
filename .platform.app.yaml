@@ -25,6 +25,9 @@ hooks:
       set -e
       bin/console cache:clear
 
+relationships:
+    database: "eyescontact-db.cqqnjgitvpvl.us-east-2.rds.amazonaws.com:mysql"
+
 # L'espace disque configurés
 disk: 2048
 
