@@ -1,7 +1,6 @@
 doctrine:
     dbal:
         driver: pdo_mysql
-        url: '%env(resolve:DATABASE_URL)%'
         host: '%env(DATABASE_HOST)%'
         port: '%env(DATABASE_PORT)%'
         dbname: '%env(DATABASE_NAME)%'
